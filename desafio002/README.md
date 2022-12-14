@@ -1,4 +1,4 @@
-# Desafio 001
+# Desafio 002
 
 Mais um adivinhe o número secreto. O número secreto é o 3.
 
