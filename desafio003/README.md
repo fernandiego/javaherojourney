@@ -1,6 +1,6 @@
 # Desafio 003
 
-Treinar listas e Strings
+Lista de tarefas - Treinar listas e Strings
 
 ## O que é e o que faz?
 
