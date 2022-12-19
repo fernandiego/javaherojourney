@@ -1,0 +1,10 @@
+Maria,CDB1,100
+Jonas,CDB2,76
+Carlos,CDB3,450
+André,CDB3,10
+Diana,CDB3,1001
+André,CDB1,2647
+
+Rosa,CDB2,10
+Claudiana,CDB3,8745
+
