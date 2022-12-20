@@ -4,7 +4,7 @@ Calcular rendimentos de um ano dos valores que os clientes tem disponíveis
 
 ## O que é?
 
-Um arquvo texto contém informações dos correntistas (nome, produto e saldo) e
+Um arquivo texto contém informações dos correntistas (nome, produto e saldo) e
 precisamos saber qual o rendimento após 12 meses.
 
 ## O que faz?
@@ -15,7 +15,7 @@ saldo e fazer as contas de qual será o valor de saldo após 12 meses.
 Cada linha do arquivo contém um registro de cliente. Cada registro tem nome,
 produto e saldo, separados por vírgula.
 
-Os podutos possíveis são:
+Os produtos possíveis são:
 
 - CDB1: rende 1% ao mês
 - CDB2: rende 2% ao mês
@@ -23,7 +23,7 @@ Os podutos possíveis são:
 
 O nome do arquivo a ser lido deve ser passado para o programa como argumento,
 daí o programa pode ler as linhas do arquivo usando o `java.util.Scanner`
-associado a um `java.io.FileInutStream`.
+associado a um `java.io.FileInputStream`.
 
 Para fins de simplicidade, basta usar a **fórmula de juros compostos** pra
 descobrir o valor de cada cliente ao final de 12 meses.
