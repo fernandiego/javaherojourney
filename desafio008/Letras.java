@@ -8,10 +8,7 @@ public class Letras {
     String arquivo = args[0];
     int letras = 0;
 
-    Scanner input  = new Scanner(new FileInputStream(arquivo));
-    String texto = input.useDelimiter("\\A").next();
-    texto = texto.replaceAll("\\d","").replaceAll("\\W","");
-    letras = texto.length();
+    // solução aqui
 
     System.out.printf("O arquivo %s tem %d letras\n", arquivo, letras);
   }
