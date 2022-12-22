@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 public class Agentes {
     public static void main(String[] args) {
 
-        System.out.println("lets go, desafio 06");
+        System.out.println("lets go, desafio 07");
 
         InputStream inputstream;
         try {
