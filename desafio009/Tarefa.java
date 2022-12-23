@@ -1,12 +1,12 @@
 public class Tarefa {
 
-    private String tarefa;
+    private String nome;
     private boolean concluida;
 
-    public Tarefa(String linha) throws Exception{
+    public Tarefa(String linha) throws Exception {
         String partes[] = linha.split(":");
-        tarefa = partes[0];
-        if(partes.length>1) {
+        nome = partes[0];
+        if (partes.length > 1) {
             concluida = Boolean.parseBoolean(partes[1]);
         }
     }
@@ -16,7 +16,7 @@ public class Tarefa {
     }
 
     @Override
-    public String toString(){
-        return tarefa+":"+concluida;
+    public String toString() {
+        return nome + ":" + concluida;
     }
 }
