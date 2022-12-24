@@ -1,0 +1,3 @@
+Estudar java:false
+Jogar dota:false
+jantar:true
