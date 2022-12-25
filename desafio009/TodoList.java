@@ -61,19 +61,23 @@ public class TodoList {
         }
     }
 
-    private void novaTarefa() {
+    private void novaTarefa() throws Exception {
         System.out.println("Digite a tarefa pra incluir:");
         String nome = input.nextLine();
+        tarefas.add(new Tarefa(nome));
+//        System.out.println(nome+" teste imprimir");
     }
 
     private void concluiTarefa() {
         System.out.println("Digite o número da tarefa para concluir:");
         int i = input.nextInt();
+        tarefas.get(i-1).concluir();
     }
 
     private void removeTarefa() {
         System.out.println("Digite o número da tarefa para remover:");
         int i = input.nextInt();
+        tarefas.remove(i-1);
     }
 
     private void sair() throws Exception {
