@@ -45,14 +45,14 @@ de compilação.
 ## Como compila?
 
 ```bash
-javac PetClinic.java
+javac *.java
 ```
 
 ## Como executa?
 
 ```bash
 # chamamos o programa
-java PetClinic
+java Main
 # imprime um menu
 O que deseja?
 
@@ -65,7 +65,7 @@ f) sair
 # escolhe uma opção
 b
 # imprime os curados
-1) maria calopsita, tradato 1 vez(es)
+1) maria calopsita, tratado 1 vez(es)
 2) peixinho verde, tratado 2 vez(es)
 # imprime um menu
 O que deseja?
@@ -111,4 +111,3 @@ f) sair
 f
 # fim
 ```
-
