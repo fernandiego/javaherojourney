@@ -35,6 +35,7 @@ public class Clinic {
             System.out.println("c) ver em tratamento");
             System.out.println("d) marcar curado");
             System.out.println("e) marcar em tratamento");
+            System.out.println("f) Salvar e sair");
             op = input.nextLine();
             switch (op) {
                 case "a":
@@ -65,21 +66,42 @@ public class Clinic {
 
     private void lista(String status) throws Exception {
         // TODO implementar
+        List<Pet> animaisFiltro = animais
+                .stream()
+                .filter(c -> {
+
+                    if (status == null) {
+                        return true;
+//                System.out.println(i + 1 + ") " + animais.get(i));
+                    } else if (status.equals("curados")) {
+                        return c.isCurado();
+
+
+                    } else if (status.equals("em tratamento")) {
+                        return c.isEmTratamento();
+                    } else {
+                        return false;
+                    }
+                })
+                .collect(Collectors.toList());
+        for (int i = 0; i < animaisFiltro.size(); i++) {
+        System.out.println(i + 1 + ") " + animaisFiltro.get(i));
+        }
+
     }
 
     private void cura() throws Exception {
         lista("em tratamento");
         System.out.println("Qual deles marcar como curado?");
         int i = input.nextInt();
-        animais.stream()
-                .filter(a -> a.isEmTratamento())
-                .collect(Collectors.toList())
-                .get(i - 1)
-                .curar();
+        animais.stream().filter(a -> a.isEmTratamento()).collect(Collectors.toList()).get(i - 1).curar();
     }
 
     private void trata() throws Exception {
         lista("curados");
+        System.out.println("Qual deles colocar em tratamento?");
+        int i = input.nextInt();
+        animais.stream().filter(a -> a.isCurado()).collect(Collectors.toList()).get(i - 1).tratar();
     }
 
 }

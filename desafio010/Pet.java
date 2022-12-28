@@ -41,7 +41,7 @@ public class Pet {
     }
 
     public boolean isCurado() {
-        return false; // TODO corrigir
+        return "curado".equals(status);
     }
 
     public boolean isEmTratamento() {
