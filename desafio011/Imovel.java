@@ -6,6 +6,8 @@ public class Imovel {
     // TODO criar os demais atributos: descricao como string, valor como double
 
     private String documento;
+    private String descricao;
+    private double valor;
 
     public String getDocumento(){
         return documento;

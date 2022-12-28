@@ -18,7 +18,7 @@ Por simplicidade, um elemento de patrimônio só pode ter um único dono.
 
 ## O que faz?
 
-O programa mantém 4 arquivos:
+O programa mantém 3 arquivos:
 
 - pessoas.txt
 - imoveis.txt

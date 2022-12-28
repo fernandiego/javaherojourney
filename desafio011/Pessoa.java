@@ -6,6 +6,7 @@ public class Pessoa {
     // TODO criar o atributos nome como string
 
     private String documento;
+    private String nome;
 
     public String getDocumento(){
         return documento;
