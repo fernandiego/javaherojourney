@@ -8,6 +8,18 @@ public class Pessoa {
     private String documento;
     private String nome;
 
+    public Pessoa(String documento, String nome) {
+        this.documento = documento;
+        this.nome = nome;
+    }
+
+    public static Pessoa fromLine(String linha) throws Exception {
+        String[] partes = linha.split(";");
+//        if (partes.length < 3) {
+//            throw new Exception("Linha inválida: " + linha);
+//        }
+        return new Pessoa(partes[0], partes[1]);
+    }
     public String getDocumento(){
         return documento;
     }
