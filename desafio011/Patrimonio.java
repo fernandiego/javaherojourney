@@ -49,6 +49,67 @@ public class Patrimonio {
     }
 
     public void menu() throws Exception {
+        String op = null;
+        while (!"f".equals(op)) {
+            System.out.println("O que deseja?");
+            System.out.println();
+            System.out.println("1) listar pessoas");
+            System.out.println("2) adicionar pessoas");
+            System.out.println("3) editar pessoas");
+            System.out.println("4) remover pessoas");
+            System.out.println("5) listar imóveis");
+            System.out.println("6) adicionar imóveis");
+            System.out.println("7) editar imóveis");
+            System.out.println("8) remover imóveis");
+            System.out.println("9) listar veículos");
+            System.out.println("10) adicionar veículos");
+            System.out.println("11) editar veículos");
+            System.out.println("12) remover veículos");
+            System.out.println("13) Sair");
+            op = input.nextLine();
+
+            switch (op) {
+                case "1":
+                    System.out.println("bleh");
+                    break;
+                case "2":
+                    System.out.println("bleh");
+                    break;
+                case "3":
+                    System.out.println("bleh");
+                    break;
+                case "4":
+                    System.out.println("bleh");
+                    break;
+                case "5":
+                    System.out.println("bleh");
+                    break;
+                case "6":
+                    System.out.println("bleh");
+                    break;
+                case "7":
+                    System.out.println("bleh");
+                    break;
+                case "8":
+                    System.out.println("bleh");
+                    break;
+                case "9":
+                    System.out.println("bleh");
+                    break;
+                case "10":
+                    System.out.println("bleh");
+                    break;
+                case "11":
+                    System.out.println("bleh");
+                    break;
+                case "12":
+                    System.out.println("bleh");
+                    break;
+                case "13":
+                    System.out.println("bleh");
+                    break;
+            }
+        }
     }
 
     public void salvarArquivos() throws Exception {
