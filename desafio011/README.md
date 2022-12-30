@@ -67,7 +67,7 @@ O programa deve ter um menu interativo oferecendo as seguintes opções:
 
 - listar pessoas
 - adicionar pessoas
-- editar pessoas
+- **editar pessoas
 - remover pessoas
 - listar imóveis
 - adicionar imóveis
@@ -76,7 +76,7 @@ O programa deve ter um menu interativo oferecendo as seguintes opções:
 - listar veículos
 - adicionar veículos
 - editar veículos
-- remover veículos
+- remover veículos**
 
 Não é permitido adicionar ou remover veículos caso o número de documento não
 exista na lista de pessoas.

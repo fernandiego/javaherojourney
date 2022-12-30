@@ -13,6 +13,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
+    @Override
+    public String toString() {
+        return String.format(nome);
+    }
+
     public static Pessoa fromLine(String linha) throws Exception {
         String[] partes = linha.split(";");
 //        if (partes.length < 3) {

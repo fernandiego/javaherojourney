@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 
 public class Patrimonio {
@@ -70,7 +71,10 @@ public class Patrimonio {
 
             switch (op) {
                 case "1":
-                    System.out.println("bleh");
+                    System.out.println("bleh 1");
+                    for (int i = 0; i < pessoas.size(); i++) {
+                        System.out.println(i + 1 + ") " + pessoas.get(i));
+                    }
                     break;
                 case "2":
                     System.out.println("bleh");
@@ -82,7 +86,10 @@ public class Patrimonio {
                     System.out.println("bleh");
                     break;
                 case "5":
-                    System.out.println("bleh");
+                    System.out.println("bleh 5");
+                    for (int i = 0; i < imoveis.size(); i++) {
+                        System.out.println(i + 1 + ") " + imoveis.get(i));
+                    }
                     break;
                 case "6":
                     System.out.println("bleh");
@@ -94,7 +101,10 @@ public class Patrimonio {
                     System.out.println("bleh");
                     break;
                 case "9":
-                    System.out.println("bleh");
+                    System.out.println("bleh 9");
+                    for (int i = 0; i < veiculos.size(); i++) {
+                        System.out.println(i + 1 + ") " + veiculos.get(i));
+                    }
                     break;
                 case "10":
                     System.out.println("bleh");

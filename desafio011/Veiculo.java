@@ -8,12 +8,16 @@ public class Veiculo {
 
     private String documento;
     private String descricao;
-    private double valor;
+    private String valor;
 
-    public Veiculo(String documento, String descricao, double valor) {
+    public Veiculo(String documento, String descricao, String valor) {
         this.documento = documento;
         this.descricao = descricao;
         this.valor = valor;
+    }
+
+    public String toString() {
+        return (descricao + ", Preço: " + valor);
     }
 
     public static Veiculo fromLine(String linha) throws Exception {
@@ -21,13 +25,14 @@ public class Veiculo {
 //        if (partes.length < 3) {
 //            throw new Exception("Linha inválida: " + linha);
 //        }
-        return new Veiculo(partes[0], partes[1], Double.parseDouble(partes[2]));
+        return new Veiculo(partes[0], partes[1], partes[2]);
     }
-    public String getDocumento(){
+
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento){
+    public void setDocumento(String documento) {
         this.documento = documento;
     }
 }

@@ -5,7 +5,7 @@ public class Imovel {
 
 
 
-    public Imovel(String documento, String descricao, double valor) {
+    public Imovel(String documento, String descricao, String valor) {
         this.documento = documento;
         this.descricao = descricao;
         this.valor = valor;
@@ -15,14 +15,19 @@ public class Imovel {
 
     private String documento;
     private String descricao;
-    private double valor;
+    private String valor;
+
+    @Override
+    public String toString() {
+        return (descricao+", Preço: "+valor);
+    }
 
     public static Imovel fromLine(String linha) throws Exception {
         String[] partes = linha.split(";");
 //        if (partes.length < 3) {
 //            throw new Exception("Linha inválida: " + linha);
 //        }
-        return new Imovel(partes[0], partes[1], Double.parseDouble(partes[2]));
+        return new Imovel(partes[0], partes[1], partes[2]);
     }
     public String getDocumento(){
         return documento;
