@@ -23,7 +23,7 @@ o usuário, conecta na internet, grava arquivo?
 ### Como compila
 
 Alguns desafios não contarão com estrutura automatizada de um projeto java
-moderno e por isso informações de como compilar, que ferramentas usar e quais as
+moderno. Por isso, informações de como compilar, que ferramentas usar e quais as
 dependências de projeto devem ser informadas.
 
 ### Como executa
