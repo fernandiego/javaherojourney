@@ -77,7 +77,7 @@ public class Patrimonio {
                     }
                     break;
                 case "2":
-                    System.out.println("bleh");
+                    addPessoa();
                     break;
                 case "3":
                     System.out.println("bleh");
@@ -92,7 +92,7 @@ public class Patrimonio {
                     }
                     break;
                 case "6":
-                    System.out.println("bleh");
+                    addImovel();
                     break;
                 case "7":
                     System.out.println("bleh");
@@ -107,7 +107,7 @@ public class Patrimonio {
                     }
                     break;
                 case "10":
-                    System.out.println("bleh");
+                    addVeiculo();
                     break;
                 case "11":
                     System.out.println("bleh");
@@ -141,5 +141,41 @@ public class Patrimonio {
         p.carregaArquivos();
         p.menu();
         p.salvarArquivos();
+    }
+
+    public void addPessoa() {
+        System.out.println("adiciona pessoa");
+        System.out.println("Nome da pessoa");
+        String nomePessoa = input.nextLine();
+        System.out.println("Documento da pessoa");
+        String documentoPessoa = input.nextLine();
+        Pessoa p = new Pessoa(documentoPessoa, nomePessoa);
+        pessoas.add(p);
+
+    }
+
+    public void addImovel() {
+        System.out.println("adiciona Imovel");
+        System.out.println("Documento do dono do imóvel");
+        String documentoImovel = input.nextLine();
+        System.out.println("Endereço do imóvel");
+        String enderecoImovel = input.nextLine();
+        System.out.println("Valor do imóvel");
+        String valorImovel = input.nextLine();
+        Imovel i = new Imovel(documentoImovel, enderecoImovel, valorImovel);
+        imoveis.add(i);
+    }
+
+    public void addVeiculo() {
+        System.out.println("adiciona Veículo");
+        System.out.println("Documento do dono do veículo");
+        String documentoVeiculo = input.nextLine();
+        System.out.println("Qual o veículo");
+        String descricaoVeiculo = input.nextLine();
+        System.out.println("Valor do veículo");
+        String valorVeiculo = input.nextLine();
+        Veiculo v = new Veiculo(documentoVeiculo, descricaoVeiculo, valorVeiculo);
+        veiculos.add(v);
+
     }
 }
