@@ -25,11 +25,20 @@ public class Pessoa {
 //        }
         return new Pessoa(partes[0], partes[1]);
     }
-    public String getDocumento(){
+
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento){
+    public String getNome() {
+        return nome;
+    }
+
+    public void setDocumento(String documento) {
         this.documento = documento;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

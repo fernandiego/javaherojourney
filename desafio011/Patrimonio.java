@@ -71,10 +71,7 @@ public class Patrimonio {
 
             switch (op) {
                 case "1":
-                    System.out.println("bleh 1");
-                    for (int i = 0; i < pessoas.size(); i++) {
-                        System.out.println(i + 1 + ") " + pessoas.get(i));
-                    }
+                    listaPessoa();
                     break;
                 case "2":
                     addPessoa();
@@ -83,13 +80,10 @@ public class Patrimonio {
                     System.out.println("bleh");
                     break;
                 case "4":
-                    System.out.println("bleh");
+                    removePessoa();
                     break;
                 case "5":
-                    System.out.println("bleh 5");
-                    for (int i = 0; i < imoveis.size(); i++) {
-                        System.out.println(i + 1 + ") " + imoveis.get(i));
-                    }
+                    listaImovel();
                     break;
                 case "6":
                     addImovel();
@@ -98,13 +92,10 @@ public class Patrimonio {
                     System.out.println("bleh");
                     break;
                 case "8":
-                    System.out.println("bleh");
+                    removeImovel();
                     break;
                 case "9":
-                    System.out.println("bleh 9");
-                    for (int i = 0; i < veiculos.size(); i++) {
-                        System.out.println(i + 1 + ") " + veiculos.get(i));
-                    }
+                    listaVeiculo();
                     break;
                 case "10":
                     addVeiculo();
@@ -113,7 +104,7 @@ public class Patrimonio {
                     System.out.println("bleh");
                     break;
                 case "12":
-                    System.out.println("bleh");
+                    removeVeiculo();
                     break;
                 case "13":
                     System.out.println("bleh");
@@ -141,6 +132,24 @@ public class Patrimonio {
         p.carregaArquivos();
         p.menu();
         p.salvarArquivos();
+    }
+
+    public void listaPessoa() {
+        for (int i = 0; i < pessoas.size(); i++) {
+            System.out.println(i + 1 + ") " + pessoas.get(i));
+        }
+    }
+
+    public void listaImovel() {
+        for (int i = 0; i < imoveis.size(); i++) {
+            System.out.println(i + 1 + ") " + imoveis.get(i));
+        }
+    }
+
+    public void listaVeiculo() {
+        for (int i = 0; i < veiculos.size(); i++) {
+            System.out.println(i + 1 + ") " + veiculos.get(i));
+        }
     }
 
     public void addPessoa() {
@@ -177,5 +186,24 @@ public class Patrimonio {
         Veiculo v = new Veiculo(documentoVeiculo, descricaoVeiculo, valorVeiculo);
         veiculos.add(v);
 
+    }
+    public void removePessoa() {
+        System.out.println("Digite o número do menu da pessoa que você gostaria de remover");
+        listaPessoa();
+        int rmPessoa = input.nextInt();
+        pessoas.remove(rmPessoa-1);
+
+    }
+    public void removeImovel() {
+        System.out.println("Digite o número do menu do imóvel que você gostaria de remover");
+        listaImovel();
+        int rmImovel = input.nextInt();
+        imoveis.remove(rmImovel-1);
+    }
+    public void removeVeiculo() {
+        System.out.println("Digite o número do menu do veículo que você gostaria de remover");
+        listaVeiculo();
+        int rmVeiculo = input.nextInt();
+        veiculos.remove(rmVeiculo-1);
     }
 }
