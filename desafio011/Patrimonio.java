@@ -77,7 +77,7 @@ public class Patrimonio {
                     addPessoa();
                     break;
                 case "3":
-                    System.out.println("bleh");
+                    editaPessoa();
                     break;
                 case "4":
                     removePessoa();
@@ -205,5 +205,16 @@ public class Patrimonio {
         listaVeiculo();
         int rmVeiculo = input.nextInt();
         veiculos.remove(rmVeiculo-1);
+    }
+    public void editaPessoa() {
+        listaPessoa();
+        System.out.println("Digite o número da pessoa que gostaria de editar");
+        int editPessoa = Integer.parseInt(input.nextLine());
+        System.out.println("Novo nome da pessoa");
+        String novoNomePessoa = input.nextLine();
+        System.out.println("Novo Documento da pessoa");
+        String novoDocumentoPessoa = input.nextLine();
+        Pessoa pessoaNova = pessoas.get(editPessoa-1);
+        pessoaNova.update(novoDocumentoPessoa,novoNomePessoa);
     }
 }

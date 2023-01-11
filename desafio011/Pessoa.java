@@ -34,11 +34,12 @@ public class Pessoa {
         return nome;
     }
 
-    public void setDocumento(String documento) {
+    public void update(String documento, String nome) {
         this.documento = documento;
-    }
-
-    public void setNome(String nome) {
         this.nome = nome;
     }
+
+//    public void setNome(String nome) {
+//        this.nome = nome;
+//    }
 }
