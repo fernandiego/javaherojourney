@@ -18,7 +18,7 @@ public class Imovel {
 
     @Override
     public String toString() {
-        return (descricao + ", Preço: " + valor);
+        return documento + ";" + descricao + ";" + valor;
     }
 
     public static Imovel fromLine(String linha) throws Exception {

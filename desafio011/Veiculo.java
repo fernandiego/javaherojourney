@@ -17,7 +17,7 @@ public class Veiculo {
     }
 
     public String toString() {
-        return (descricao + ", Preço: " + valor);
+        return documento + ";" + descricao + ";"  + valor;
     }
 
     public static Veiculo fromLine(String linha) throws Exception {

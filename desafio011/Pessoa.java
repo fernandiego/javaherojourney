@@ -15,7 +15,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return String.format(nome);
+        return documento + ";" + nome;
     }
 
     public static Pessoa fromLine(String linha) throws Exception {

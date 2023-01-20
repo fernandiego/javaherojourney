@@ -109,6 +109,7 @@ public class Patrimonio {
                     break;
                 case "13":
                     salva();
+                    op = "f";
                     break;
             }
         }
@@ -172,7 +173,7 @@ public class Patrimonio {
         String enderecoImovel = input.nextLine();
         System.out.println("Valor do imóvel");
         String valorImovel = input.nextLine();
-        Imovel i = new Imovel(documentoImovel, enderecoImovel, valorImovel);
+        Imovel i = new Imovel(documentoImovel, enderecoImovel,"Preço: " + valorImovel);
         imoveis.add(i);
     }
 
@@ -184,7 +185,7 @@ public class Patrimonio {
         String descricaoVeiculo = input.nextLine();
         System.out.println("Valor do veículo");
         String valorVeiculo = input.nextLine();
-        Veiculo v = new Veiculo(documentoVeiculo, descricaoVeiculo, valorVeiculo);
+        Veiculo v = new Veiculo(documentoVeiculo, descricaoVeiculo,"Preço: " + valorVeiculo);
         veiculos.add(v);
 
     }
@@ -237,21 +238,27 @@ public class Patrimonio {
         veiculoNovoDono.update(novoDocumentoVeiculo);
     }
 
-    private void salva() throws Exception {
+    private  void salvaPessoa() throws Exception {
         PrintWriter writerPessoa = new PrintWriter("pessoas.txt");
         pessoas.forEach(writerPessoa::println);
         writerPessoa.flush();
-
-        PrintWriter writerVeiculo = new PrintWriter("veiculos.txt");
-        veiculos.forEach(writerPessoa::println);
-        writerVeiculo.flush();
-
-        PrintWriter writerImovel = new PrintWriter("imoveis.txt");
-        imoveis.forEach(writerPessoa::println);
-        writerImovel.flush();
-
-        writerImovel.close();
         writerPessoa.close();
+    }
+    private void salvaVeiculo() throws Exception {
+        PrintWriter writerVeiculo = new PrintWriter("veiculos.txt");
+        veiculos.forEach(writerVeiculo::println);
+        writerVeiculo.flush();
         writerVeiculo.close();
+    }
+    private void salvaImovel() throws Exception {
+        PrintWriter writerImovel = new PrintWriter("imoveis.txt");
+        imoveis.forEach(writerImovel::println);
+        writerImovel.flush();
+        writerImovel.close();
+    }
+    private void salva() throws Exception {
+       salvaPessoa();
+       salvaImovel();
+       salvaVeiculo();
     }
 }
