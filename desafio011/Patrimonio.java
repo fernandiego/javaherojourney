@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
+import java.util.*;
 
 
 public class Patrimonio {
@@ -89,7 +90,7 @@ public class Patrimonio {
                     addImovel();
                     break;
                 case "7":
-                    System.out.println("bleh");
+                    editaImovel();
                     break;
                 case "8":
                     removeImovel();
@@ -101,13 +102,13 @@ public class Patrimonio {
                     addVeiculo();
                     break;
                 case "11":
-                    System.out.println("bleh");
+                    editaVeiculo();
                     break;
                 case "12":
                     removeVeiculo();
                     break;
                 case "13":
-                    System.out.println("bleh");
+                    salva();
                     break;
             }
         }
@@ -216,5 +217,41 @@ public class Patrimonio {
         String novoDocumentoPessoa = input.nextLine();
         Pessoa pessoaNova = pessoas.get(editPessoa-1);
         pessoaNova.update(novoDocumentoPessoa,novoNomePessoa);
+    }
+    public void editaImovel() {
+        listaImovel();
+        System.out.println("Digite o número do Imóvel que gostaria de editar");
+        int editImovel = Integer.parseInt(input.nextLine());
+        System.out.println("Documento do novo dono do Imóvel");
+        String novoDocumentoImovel = input.nextLine();
+        Imovel imovelNovoDono = imoveis.get(editImovel-1);
+        imovelNovoDono.update(novoDocumentoImovel);
+    }
+    public void editaVeiculo() {
+        listaVeiculo();
+        System.out.println("Digite o número do Veículo que gostaria de editar");
+        int editVeiculo = Integer.parseInt(input.nextLine());
+        System.out.println("Documento do novo dono do Veículo");
+        String novoDocumentoVeiculo = input.nextLine();
+        Veiculo veiculoNovoDono = veiculos.get(editVeiculo-1);
+        veiculoNovoDono.update(novoDocumentoVeiculo);
+    }
+
+    private void salva() throws Exception {
+        PrintWriter writerPessoa = new PrintWriter("pessoas.txt");
+        pessoas.forEach(writerPessoa::println);
+        writerPessoa.flush();
+
+        PrintWriter writerVeiculo = new PrintWriter("veiculos.txt");
+        veiculos.forEach(writerPessoa::println);
+        writerVeiculo.flush();
+
+        PrintWriter writerImovel = new PrintWriter("imoveis.txt");
+        imoveis.forEach(writerPessoa::println);
+        writerImovel.flush();
+
+        writerImovel.close();
+        writerPessoa.close();
+        writerVeiculo.close();
     }
 }

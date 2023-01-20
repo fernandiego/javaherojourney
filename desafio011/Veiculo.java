@@ -32,7 +32,7 @@ public class Veiculo {
         return documento;
     }
 
-    public void setDocumento(String documento) {
+    public void update(String documento) {
         this.documento = documento;
     }
 }

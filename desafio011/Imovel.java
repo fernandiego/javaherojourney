@@ -4,7 +4,6 @@ public class Imovel {
     // na hora de criar um novo do zero
 
 
-
     public Imovel(String documento, String descricao, String valor) {
         this.documento = documento;
         this.descricao = descricao;
@@ -19,7 +18,7 @@ public class Imovel {
 
     @Override
     public String toString() {
-        return (descricao+", Preço: "+valor);
+        return (descricao + ", Preço: " + valor);
     }
 
     public static Imovel fromLine(String linha) throws Exception {
@@ -29,11 +28,16 @@ public class Imovel {
 //        }
         return new Imovel(partes[0], partes[1], partes[2]);
     }
-    public String getDocumento(){
+
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento){
+//    public void setDocumento(String documento){
+//        this.documento = documento;
+//    }
+
+    public void update(String documento) {
         this.documento = documento;
     }
 }
