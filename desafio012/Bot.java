@@ -23,6 +23,10 @@ public class Bot {
     }
 
     public void opera(Papel p) {
-        // TODO opera compra ou venda ou sem operação de acordo com as configurações do bot
+       System.out.println("Meu papel é: "+ p);
+       if(p.getValor() > precoCompra){
+           quantidadePapel++;
+           capital-= p.getValor();
+       }
     }
 }

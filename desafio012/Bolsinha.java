@@ -40,8 +40,11 @@ public class Bolsinha {
         while (tempo-- > 0) {
             papeis.forEach(this::variaPreco);
             // TODO pega papel pro bot operar
-            Papel p = null;
-            bot.opera(p);
+            for (int i = 0; i < papeis.size(); i++) {
+                if(papeis.get(i).getNome().equals(bot.getNomePapel())){
+                    bot.opera(papeis.get(i));
+                }
+            }
             System.out.println(papeis);
             bot.posicao();
             // pausa de um segundo
