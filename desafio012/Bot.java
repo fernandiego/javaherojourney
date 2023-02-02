@@ -24,9 +24,14 @@ public class Bot {
 
     public void opera(Papel p) {
        System.out.println("Meu papel é: "+ p);
-       if(p.getValor() > precoCompra){
+       if(quantidadePapel > 0 && p.getValor() > precoVenda){
+           quantidadePapel--;
+           capital+=p.getValor();
+       }
+       else if(p.getValor() > precoCompra && capital > p.getValor() ){
            quantidadePapel++;
            capital-= p.getValor();
        }
+
     }
 }

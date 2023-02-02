@@ -48,7 +48,7 @@ public class Bolsinha {
             System.out.println(papeis);
             bot.posicao();
             // pausa de um segundo
-            Thread.sleep(1000l);
+            Thread.sleep(2000l);
         }
     }
 
