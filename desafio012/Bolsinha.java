@@ -39,17 +39,23 @@ public class Bolsinha {
     private void simula(int tempo) throws Exception {
         while (tempo-- > 0) {
             papeis.forEach(this::variaPreco);
+            Papel p = null;
             // TODO pega papel pro bot operar
             for (int i = 0; i < papeis.size(); i++) {
+
                 if(papeis.get(i).getNome().equals(bot.getNomePapel())){
+                    p = papeis.get(i);
                     bot.opera(papeis.get(i));
                 }
             }
             System.out.println(papeis);
             bot.posicao();
+                 int x = bot.getCapital() + (p.getValor()*bot.getQuantidadePapel());
+                 System.out.println("Meu Patrimônio no momento é de: " + x);
             // pausa de um segundo
             Thread.sleep(2000l);
         }
+
     }
 
     private void variaPreco(Papel p) {

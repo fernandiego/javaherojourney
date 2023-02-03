@@ -18,12 +18,20 @@ public class Bot {
         return nomePapel; // pega o nome do papel
     }
 
+    public int getCapital() {
+        return capital;
+    }
+
+    public int getQuantidadePapel() {
+        return quantidadePapel;
+    }
+
     public void posicao() {
-        System.out.printf("Capital: %d\nPapel: %d %s\n", capital, quantidadePapel, nomePapel);
+        System.out.printf("Cash: %d\nPapel: %d %s\n", capital, quantidadePapel, nomePapel);
     }
 
     public void opera(Papel p) {
-       System.out.println("Meu papel é: "+ p);
+       System.out.println("Papel em carteira: "+ p);
        if(quantidadePapel > 0 && p.getValor() > precoVenda){
            quantidadePapel--;
            capital+=p.getValor();
